@@ -12,6 +12,8 @@
 		65240A5F20F545C30045E0C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65240A5E20F545C30045E0C6 /* Assets.xcassets */; };
 		65240A6220F545C30045E0C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65240A6020F545C30045E0C6 /* LaunchScreen.storyboard */; };
 		6526FE9A20F678B200A685C1 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6526FE9920F678B200A685C1 /* GradientView.swift */; };
+		6526FE9D20F6926200A685C1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6526FE9C20F6926200A685C1 /* Constants.swift */; };
+		6526FE9F20F6955A00A685C1 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6526FE9E20F6955A00A685C1 /* LoginVC.swift */; };
 		65C7BCBE20F54E6700C8972D /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C7BCBD20F54E6700C8972D /* ChatVC.swift */; };
 		65C7BCC020F54E7400C8972D /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C7BCBF20F54E7400C8972D /* ChannelVC.swift */; };
 		65C7BCC320F54F0400C8972D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C7BCC220F54F0400C8972D /* SWRevealViewController.m */; };
@@ -28,6 +30,8 @@
 		65240A6120F545C30045E0C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65240A6320F545C30045E0C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6526FE9920F678B200A685C1 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		6526FE9C20F6926200A685C1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Smack/View/Constants.swift; sourceTree = SOURCE_ROOT; };
+		6526FE9E20F6955A00A685C1 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		65C7BCBD20F54E6700C8972D /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		65C7BCBF20F54E7400C8972D /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		65C7BCC120F54F0400C8972D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 		65240A5620F545C20045E0C6 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				6526FE9B20F6924C00A685C1 /* Utilities */,
 				65E9A24920F54E140026EF01 /* View */,
 				65E9A24A20F54E1A0026EF01 /* Model */,
 				65E9A24B20F54E200026EF01 /* Controller */,
@@ -89,6 +94,15 @@
 				65240A6320F545C30045E0C6 /* Info.plist */,
 			);
 			path = Smack;
+			sourceTree = "<group>";
+		};
+		6526FE9B20F6924C00A685C1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6526FE9C20F6926200A685C1 /* Constants.swift */,
+			);
+			name = Utilities;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		65E9A24420F54C150026EF01 /* Supporting Files */ = {
@@ -121,6 +135,7 @@
 			children = (
 				65C7BCBD20F54E6700C8972D /* ChatVC.swift */,
 				65C7BCBF20F54E7400C8972D /* ChannelVC.swift */,
+				6526FE9E20F6955A00A685C1 /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -254,9 +269,11 @@
 			files = (
 				65C7BCC020F54E7400C8972D /* ChannelVC.swift in Sources */,
 				65C7BCBE20F54E6700C8972D /* ChatVC.swift in Sources */,
+				6526FE9F20F6955A00A685C1 /* LoginVC.swift in Sources */,
 				6526FE9A20F678B200A685C1 /* GradientView.swift in Sources */,
 				65240A5820F545C20045E0C6 /* AppDelegate.swift in Sources */,
 				65C7BCC320F54F0400C8972D /* SWRevealViewController.m in Sources */,
+				6526FE9D20F6926200A685C1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
