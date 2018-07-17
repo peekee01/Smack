@@ -22,7 +22,13 @@ class CreateAccountVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDataService.instance.avatarName != "" {
+            userImg.image = UIImage(named: UserDataService.instance.avatarName)
+            avatarName = UserDataService.instance.avatarName
+        }
     }
     
     @IBAction func pickAvatarPressed(_ sender: Any) {
@@ -39,12 +45,12 @@ class CreateAccountVC: UIViewController {
         
         AuthService.instance.registerUser(email: email, password: pass) { (success) in
             if success {
-                //                print("User suggesfully registered")
+                //print("User suggesfully registered")
                 AuthService.instance.loginUser(email: email, password: pass, completion: { (success) in
                     if success {
                         AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
                             if success {
-                                //                                print(UserDataService.instance.name, UserDataService.instance.avatarName)
+                                //print(UserDataService.instance.name, UserDataService.instance.avatarName)
                                 self.performSegue(withIdentifier: UNWIND, sender: nil)
                             }
                         })
