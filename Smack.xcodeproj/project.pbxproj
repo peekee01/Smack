@@ -108,8 +108,7 @@
 			children = (
 				6526FE9C20F6926200A685C1 /* Constants.swift */,
 			);
-			name = Utilities;
-			path = "New Group";
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		6526FEA220F7F3E900A685C1 /* Services */ = {
