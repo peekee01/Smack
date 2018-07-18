@@ -101,9 +101,9 @@
                                 <state key="normal" image="addChannelButton"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9K-Mk-xpn">
-                                <rect key="frame" x="115" y="738" width="51" height="33"/>
+                                <rect key="frame" x="115" y="738" width="46" height="33"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Log in">
+                                <state key="normal" title="Login">
                                     <color key="titleColor" red="0.95294117649999999" green="0.95294117649999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -172,6 +172,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="e9K-Mk-xpn" id="tja-C5-3aT"/>
+                        <outlet property="userImg" destination="pRR-v6-HFo" id="FSW-p5-fd3"/>
                         <segue destination="enl-G8-bsb" kind="show" identifier="toLogin" id="c7K-od-ALu"/>
                     </connections>
                 </viewController>
