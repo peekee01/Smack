@@ -74,6 +74,8 @@ class AuthService {
         ]
         
         Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response) in
+            print(response.result.error as Any)
+            print(response)
             if response.result.error == nil {
                 // SWIFT 4 METHOD
                 //                if let json = response.result.value as? Dictionary<String, Any> {
@@ -89,18 +91,22 @@ class AuthService {
                 guard let data = response.data else { return }
                 do {
                     let json = try JSON(data: data)
+                    print(json)
                     self.userEmail = json["user"].stringValue
                     self.authToken = json["token"].stringValue
+                    print("Login succesvol 1")
                     
                 } catch {
+                    print("ik zit nu in de catch van LoginUser")
                     print(error)
                 }
                 
                 self.isLoggedIn = true
-                
+                print("Login succesvol 2")
                 completion(true)
             } else {
                 completion(false)
+                print("Ik zit in de debugprint van loginUser")
                 debugPrint(response.result.error as Any)
             }
         }
@@ -136,9 +142,11 @@ class AuthService {
             if response.result.error == nil {
                 guard let data = response.data else { return }
                 self.setUserInfo(data: data)
+                print("ik ben nu userdata aan het zetten")
                 completion(true)
             } else {
                 completion(false)
+                print("Ik zit in de debugprint van findUser")
                 debugPrint(response.result.error as Any)
             }
         }
@@ -156,6 +164,7 @@ class AuthService {
             
             UserDataService.instance.setUserDataService(id: id, color: color, avatarName: avatarName, email: email, name: name)
         } catch {
+            print("de error komt van de setUserInfo functie")
             print(error)
         }
     }
