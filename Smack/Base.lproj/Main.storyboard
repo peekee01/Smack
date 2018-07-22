@@ -229,6 +229,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPressed:" destination="enl-G8-bsb" eventType="touchUpInside" id="acy-bW-8Js"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pk2-kV-MWo">
                                 <rect key="frame" x="90.666666666666686" y="360" width="194" height="30"/>
@@ -283,6 +286,10 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Qm1-Ag-DZX">
+                                <rect key="frame" x="169" y="267.66666666666669" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -291,8 +298,10 @@
                             <constraint firstItem="VK2-bq-P6q" firstAttribute="top" secondItem="ooe-dE-MaS" secondAttribute="top" constant="28" id="Ea1-65-utc"/>
                             <constraint firstItem="1Vd-Wn-c9Z" firstAttribute="top" secondItem="Wbb-Tu-OX8" secondAttribute="bottom" constant="40" id="LOE-Nr-oxp"/>
                             <constraint firstItem="Vgs-6W-9Rx" firstAttribute="centerX" secondItem="fYh-Dj-c3S" secondAttribute="centerX" id="NDo-tV-9fd"/>
+                            <constraint firstItem="Qm1-Ag-DZX" firstAttribute="centerX" secondItem="fYh-Dj-c3S" secondAttribute="centerX" id="O8g-Yv-rhF"/>
                             <constraint firstItem="pk2-kV-MWo" firstAttribute="centerX" secondItem="fYh-Dj-c3S" secondAttribute="centerX" id="RyE-39-qFE"/>
                             <constraint firstItem="ooe-dE-MaS" firstAttribute="trailing" secondItem="VK2-bq-P6q" secondAttribute="trailing" constant="20" id="TCA-zQ-x36"/>
+                            <constraint firstItem="Qm1-Ag-DZX" firstAttribute="centerY" secondItem="fYh-Dj-c3S" secondAttribute="centerY" constant="-120" id="Tcp-Qy-Pjy"/>
                             <constraint firstItem="pk2-kV-MWo" firstAttribute="top" secondItem="Vgs-6W-9Rx" secondAttribute="bottom" id="cun-f8-hWQ"/>
                             <constraint firstItem="Vgs-6W-9Rx" firstAttribute="top" secondItem="1Vd-Wn-c9Z" secondAttribute="bottom" constant="40" id="eFM-Ap-U2j"/>
                             <constraint firstItem="1Vd-Wn-c9Z" firstAttribute="centerX" secondItem="fYh-Dj-c3S" secondAttribute="centerX" id="yZ4-C4-xAD"/>
@@ -300,6 +309,9 @@
                         <viewLayoutGuide key="safeArea" id="ooe-dE-MaS"/>
                     </view>
                     <connections>
+                        <outlet property="passwordTxt" destination="ecD-eu-FAP" id="uAq-9U-9Wq"/>
+                        <outlet property="spinner" destination="Qm1-Ag-DZX" id="RqZ-fZ-9I9"/>
+                        <outlet property="userNameTxt" destination="5CG-tT-Tr1" id="Mha-x7-tA7"/>
                         <segue destination="xQK-jx-g8n" kind="show" identifier="toCreateAccount" id="ugK-c9-TUw"/>
                     </connections>
                 </viewController>
