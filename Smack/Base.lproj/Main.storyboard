@@ -120,8 +120,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ebR-cU-dQl">
                                 <rect key="frame" x="0.0" y="178.66666666666669" width="375" height="518.33333333333326"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dDt-xZ-eBE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChannelCell" id="dDt-xZ-eBE" customClass="ChannelCell" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dDt-xZ-eBE" id="NNu-XS-KIc">
@@ -141,6 +142,10 @@
                                                 <constraint firstItem="eQc-CS-iep" firstAttribute="leading" secondItem="NNu-XS-KIc" secondAttribute="leadingMargin" constant="20" id="Xpa-H0-1H2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="channelName" destination="eQc-CS-iep" id="edy-tK-qKG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -172,6 +177,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="e9K-Mk-xpn" id="tja-C5-3aT"/>
+                        <outlet property="tableView" destination="ebR-cU-dQl" id="I0E-KS-Hbb"/>
                         <outlet property="userImg" destination="pRR-v6-HFo" id="FSW-p5-fd3"/>
                         <segue destination="enl-G8-bsb" kind="show" identifier="toLogin" id="c7K-od-ALu"/>
                     </connections>
