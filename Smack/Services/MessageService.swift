@@ -68,7 +68,6 @@ class MessageService {
                             
                             let message = Message(message: messageBody, userName: userName, channelId: channelId, userAvatar: userAvatar, userAvatarColor: userAvatarColor, id: id, timeStamp: timeStamp)
                             self.messages.append(message)
-                            print(self.messages)
                         }
                     }
                 } catch {
