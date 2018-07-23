@@ -30,6 +30,7 @@
 		65B8DE3621051A8200ED0B47 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B8DE3421051A8200ED0B47 /* AddChannelVC.xib */; };
 		65B8DE38210520C400ED0B47 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B8DE37210520C400ED0B47 /* SocketService.swift */; };
 		65B8DE3B21065B0400ED0B47 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B8DE3A21065B0300ED0B47 /* Message.swift */; };
+		65B8DE3D2106669F00ED0B47 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B8DE3C2106669F00ED0B47 /* KeyboardBoundView.swift */; };
 		65C7BCBE20F54E6700C8972D /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C7BCBD20F54E6700C8972D /* ChatVC.swift */; };
 		65C7BCC020F54E7400C8972D /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C7BCBF20F54E7400C8972D /* ChannelVC.swift */; };
 		65C7BCC320F54F0400C8972D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C7BCC220F54F0400C8972D /* SWRevealViewController.m */; };
@@ -64,6 +65,7 @@
 		65B8DE3421051A8200ED0B47 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
 		65B8DE37210520C400ED0B47 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		65B8DE3A21065B0300ED0B47 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		65B8DE3C2106669F00ED0B47 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		65C7BCBD20F54E6700C8972D /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		65C7BCBF20F54E7400C8972D /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		65C7BCC120F54F0400C8972D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		65E9A24920F54E140026EF01 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				65B8DE3C2106669F00ED0B47 /* KeyboardBoundView.swift */,
 				6526FE9920F678B200A685C1 /* GradientView.swift */,
 				6526FEA720F7FEA200A685C1 /* RoundedButton.swift */,
 				652B60C120FE979F003CB87D /* AvatarCell.swift */,
@@ -332,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65B8DE3D2106669F00ED0B47 /* KeyboardBoundView.swift in Sources */,
 				65B8DE38210520C400ED0B47 /* SocketService.swift in Sources */,
 				652B60C720FFDC56003CB87D /* ProfileVC.swift in Sources */,
 				65B8DE32210516D300ED0B47 /* ChannelCell.swift in Sources */,
