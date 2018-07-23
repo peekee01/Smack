@@ -34,6 +34,7 @@ class SocketService: NSObject {
     }
     
     func getChannel(completion: @escaping CompletionHandler) {
+        
         socket.on("channelCreated") { (dataArray, ack) in
             guard let channelName = dataArray[0] as? String else { return }
             guard let channelDescription = dataArray[1] as? String else { return }
