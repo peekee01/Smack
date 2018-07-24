@@ -143,10 +143,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcb-jG-dx8">
+                                <rect key="frame" x="8" y="756" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Q6L-4n-dEt" firstAttribute="top" secondItem="gcb-jG-dx8" secondAttribute="bottom" constant="6" id="5lf-UZ-19k"/>
                             <constraint firstItem="Q6L-4n-dEt" firstAttribute="top" secondItem="dfb-no-2go" secondAttribute="bottom" constant="30" id="Cq3-PW-GUi"/>
+                            <constraint firstItem="gcb-jG-dx8" firstAttribute="leading" secondItem="FaM-Q2-QFf" secondAttribute="leading" constant="8" id="D1Y-pi-zqY"/>
                             <constraint firstItem="k0c-Tf-aDm" firstAttribute="centerY" secondItem="Q6L-4n-dEt" secondAttribute="centerY" id="FXy-O8-VyI"/>
                             <constraint firstItem="Kvu-4A-CmP" firstAttribute="top" secondItem="8X7-Wc-21j" secondAttribute="top" id="Ty1-R1-zEG"/>
                             <constraint firstItem="dfb-no-2go" firstAttribute="top" secondItem="Kvu-4A-CmP" secondAttribute="bottom" id="UKj-yu-ZaR"/>
@@ -167,6 +175,7 @@
                         <outlet property="messageTxtBox" destination="Q6L-4n-dEt" id="59j-dd-D0n"/>
                         <outlet property="sendBtn" destination="k0c-Tf-aDm" id="31w-EU-yKi"/>
                         <outlet property="tableView" destination="dfb-no-2go" id="tGd-3x-XRr"/>
+                        <outlet property="typingUsersLbl" destination="gcb-jG-dx8" id="lN1-n5-z7o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgO-pI-bKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
