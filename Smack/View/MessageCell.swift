@@ -22,6 +22,22 @@ class MessageCell: UITableViewCell {
     }
 
     func configureCell(message: Message) {
+    
+        guard var isoDate = message.timeStamp else { return }
+        let end = isoDate.index(isoDate.endIndex, offsetBy: -5)
+        isoDate = String(isoDate.prefix(upTo: end))
+        
+        let isoFormatter = ISO8601DateFormatter()
+        let chatDate = isoFormatter.date(from: isoDate.appending("Z"))
+        
+        let newFormatter = DateFormatter()
+        newFormatter.dateFormat = "MMM d, h:mm a"
+        
+        if let finalDate = chatDate {
+            let finalDate = newFormatter.string(from: finalDate)
+            timeStampLbl.text = finalDate
+        }
+        
         messageBodyLbl.text = message.message
         userNameLbl.text = message.userName
 //        timeStampLbl.text = message.timeStamp

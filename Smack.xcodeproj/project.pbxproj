@@ -32,6 +32,8 @@
 		65B8DE3B21065B0400ED0B47 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B8DE3A21065B0300ED0B47 /* Message.swift */; };
 		65B8DE3D2106669F00ED0B47 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B8DE3C2106669F00ED0B47 /* KeyboardBoundView.swift */; };
 		65B8DE3F21066E1900ED0B47 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B8DE3E21066E1900ED0B47 /* MessageCell.swift */; };
+		65B8DE422107CEBF00ED0B47 /* UpdateUserNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B8DE402107CEBF00ED0B47 /* UpdateUserNameVC.swift */; };
+		65B8DE432107CEBF00ED0B47 /* UpdateUserNameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B8DE412107CEBF00ED0B47 /* UpdateUserNameVC.xib */; };
 		65C7BCBE20F54E6700C8972D /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C7BCBD20F54E6700C8972D /* ChatVC.swift */; };
 		65C7BCC020F54E7400C8972D /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C7BCBF20F54E7400C8972D /* ChannelVC.swift */; };
 		65C7BCC320F54F0400C8972D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C7BCC220F54F0400C8972D /* SWRevealViewController.m */; };
@@ -68,6 +70,8 @@
 		65B8DE3A21065B0300ED0B47 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		65B8DE3C2106669F00ED0B47 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		65B8DE3E21066E1900ED0B47 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		65B8DE402107CEBF00ED0B47 /* UpdateUserNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserNameVC.swift; sourceTree = "<group>"; };
+		65B8DE412107CEBF00ED0B47 /* UpdateUserNameVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateUserNameVC.xib; sourceTree = "<group>"; };
 		65C7BCBD20F54E6700C8972D /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		65C7BCBF20F54E7400C8972D /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		65C7BCC120F54F0400C8972D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 			children = (
 				652B60C620FFDC56003CB87D /* ProfileVC.xib */,
 				65B8DE3421051A8200ED0B47 /* AddChannelVC.xib */,
+				65B8DE412107CEBF00ED0B47 /* UpdateUserNameVC.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 				652B60C520FFDC56003CB87D /* ProfileVC.swift */,
 				6526FEA020F696AC00A685C1 /* CreateAccountVC.swift */,
 				652B60BF20FE967C003CB87D /* AvatarPickerVC.swift */,
+				65B8DE402107CEBF00ED0B47 /* UpdateUserNameVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -280,6 +286,7 @@
 			files = (
 				65B8DE3621051A8200ED0B47 /* AddChannelVC.xib in Resources */,
 				652B60C820FFDC56003CB87D /* ProfileVC.xib in Resources */,
+				65B8DE432107CEBF00ED0B47 /* UpdateUserNameVC.xib in Resources */,
 				65240A6220F545C30045E0C6 /* LaunchScreen.storyboard in Resources */,
 				65240A5F20F545C30045E0C6 /* Assets.xcassets in Resources */,
 				65240A5D20F545C20045E0C6 /* Main.storyboard in Resources */,
@@ -356,6 +363,7 @@
 				6526FEA620F7F41B00A685C1 /* AuthService.swift in Sources */,
 				6526FE9F20F6955A00A685C1 /* LoginVC.swift in Sources */,
 				65B8DE3521051A8200ED0B47 /* AddChannelVC.swift in Sources */,
+				65B8DE422107CEBF00ED0B47 /* UpdateUserNameVC.swift in Sources */,
 				6526FE9A20F678B200A685C1 /* GradientView.swift in Sources */,
 				652B60C220FE979F003CB87D /* AvatarCell.swift in Sources */,
 				65240A5820F545C20045E0C6 /* AppDelegate.swift in Sources */,

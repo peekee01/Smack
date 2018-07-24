@@ -50,5 +50,17 @@ class ProfileVC: UIViewController {
     }
     
     
+    @IBAction func updateUserName(_ sender: Any) {
+        if AuthService.instance.isLoggedIn {
+            let updateUserName = UpdateUserNameVC()
+            updateUserName.modalPresentationStyle = .custom
+            present(updateUserName, animated: true, completion: nil)
+
+        } else {
+            performSegue(withIdentifier: TO_LOGIN, sender: nil)
+        }
+    }
+    
+    
     
 }

@@ -40,16 +40,19 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected(_:)), name: NOTIF_CHANNEL_SELECTED, object: nil)
         
-        SocketService.instance.getMessage { (success) in
-            if success {
+        
+        SocketService.instance.getMessage { (newMessage) in
+            if newMessage.channelId == MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn {
+                MessageService.instance.messages.append(newMessage)
+                
                 self.tableView.reloadData()
                 if MessageService.instance.messages.count > 0 {
-                    let indIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
-                    self.tableView.scrollToRow(at: indIndex, at: .bottom, animated: false)
+                    let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
                 }
             }
         }
-     
+        
         SocketService.instance.getTypingUsers { (typingUsers) in
             guard let channelId = MessageService.instance.selectedChannel?.id else { return }
             var names = ""
@@ -65,13 +68,13 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     numberOfTypers += 1
                 }
             }
-        
+            
             if numberOfTypers > 0 && AuthService.instance.isLoggedIn == true {
                 var verb = "is"
                 if numberOfTypers > 1 {
                     verb = "are"
                 }
-            self.typingUsersLbl.text = "\(names) \(verb) typing a message..."
+                self.typingUsersLbl.text = "\(names) \(verb) typing a message..."
             } else {
                 self.typingUsersLbl.text = ""
             }
@@ -106,6 +109,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let channelName = MessageService.instance.selectedChannel?.channelTitle ?? ""
         channelNameLbl.text = "#\(channelName)"
         getMessages()
+        
     }
     
     @IBAction func sendMsgPressed(_ sender: Any) {
@@ -118,7 +122,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     self.messageTxtBox.text = ""
                     self.messageTxtBox.resignFirstResponder()
                     SocketService.instance.socket.emit("stopType", UserDataService.instance.name, channelId)
-
+                    
                 }
             }
         }
@@ -152,16 +156,20 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    
+    
     func getMessages() {
         guard let channelId = MessageService.instance.selectedChannel?.id else { return }
         MessageService.instance.findAllMessagesForChannel(channelId: channelId) { (success) in
             if success {
                 self.tableView.reloadData()
+                if MessageService.instance.messages.count > 0 {
+                    let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
+                }
             }
         }
     }
-    
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath) as? MessageCell {

@@ -82,6 +82,15 @@
                                 <action selector="logoutPressed:" destination="-1" eventType="touchUpInside" id="b81-Yz-Ta5"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zq1-dv-XQW">
+                            <rect key="frame" x="120" y="200.5" width="95" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="pEL-dI-LdU"/>
+                            </constraints>
+                            <connections>
+                                <action selector="updateUserName:" destination="-1" eventType="touchUpInside" id="erZ-2N-US6"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -90,7 +99,10 @@
                         <constraint firstItem="n58-2V-lu1" firstAttribute="centerY" secondItem="9mL-Ig-eY6" secondAttribute="centerY" constant="-20" id="SKb-L4-UqF"/>
                         <constraint firstAttribute="bottom" secondItem="bG7-YS-6Kg" secondAttribute="bottom" constant="8" id="aJJ-en-Pap"/>
                         <constraint firstItem="n58-2V-lu1" firstAttribute="centerX" secondItem="9mL-Ig-eY6" secondAttribute="centerX" id="bsu-ZN-VUH"/>
+                        <constraint firstAttribute="trailing" secondItem="zq1-dv-XQW" secondAttribute="trailing" constant="120" id="dTA-p2-3gW"/>
+                        <constraint firstItem="zq1-dv-XQW" firstAttribute="centerY" secondItem="Xns-T5-GeT" secondAttribute="centerY" id="ex8-O2-QYw"/>
                         <constraint firstAttribute="height" constant="360" id="fwB-cz-HYr"/>
+                        <constraint firstItem="zq1-dv-XQW" firstAttribute="leading" secondItem="9mL-Ig-eY6" secondAttribute="leading" constant="120" id="heY-Le-YTj"/>
                         <constraint firstAttribute="trailing" secondItem="Z17-VN-aZi" secondAttribute="trailing" constant="8" id="hqK-6w-21d"/>
                     </constraints>
                 </view>
