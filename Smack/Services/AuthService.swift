@@ -178,9 +178,18 @@ class AuthService {
             "avatarColor": UserDataService.instance.avatarColor
         ]
         
-        Alamofire.request(URL_UPDATE_USERNAME, method: .put, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+        print(body)
+        
+        Alamofire.request("\(URL_UPDATE_USERNAME)\(UserDataService.instance.id)", method: .put, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+           print("\(URL_UPDATE_USERNAME)\(UserDataService.instance.id)")
             if response.result.error == nil {
-                completion(true)
+                print("Ik ben success new Username")
+                self.findUserByEmail(completion: { (success) in
+                    if success {
+                        completion(true)
+                        print("succes vol userinfo opgehaald met nieuwe username")
+                    }
+                })
             } else {
                 completion(false)
                 print("Ik zit in de debugprint van updateUserName")

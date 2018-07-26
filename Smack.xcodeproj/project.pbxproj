@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6514CA48210A6A1000262E95 /* UpdateAvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514CA46210A6A1000262E95 /* UpdateAvatarPickerVC.swift */; };
+		6514CA49210A6A1000262E95 /* UpdateAvatarPickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6514CA47210A6A1000262E95 /* UpdateAvatarPickerVC.xib */; };
+		6514CA4C210A6F4A00262E95 /* UpdateAvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514CA4A210A6F4A00262E95 /* UpdateAvatarCell.swift */; };
+		6514CA4D210A6F4A00262E95 /* UpdateAvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6514CA4B210A6F4A00262E95 /* UpdateAvatarCell.xib */; };
 		65240A5820F545C20045E0C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65240A5720F545C20045E0C6 /* AppDelegate.swift */; };
 		65240A5D20F545C20045E0C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65240A5B20F545C20045E0C6 /* Main.storyboard */; };
 		65240A5F20F545C30045E0C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65240A5E20F545C30045E0C6 /* Assets.xcassets */; };
@@ -43,6 +47,10 @@
 /* Begin PBXFileReference section */
 		49EDC974E9985171879525A5 /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
 		539B0A7E873F8106F96B1FD2 /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6514CA46210A6A1000262E95 /* UpdateAvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAvatarPickerVC.swift; sourceTree = "<group>"; };
+		6514CA47210A6A1000262E95 /* UpdateAvatarPickerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateAvatarPickerVC.xib; sourceTree = "<group>"; };
+		6514CA4A210A6F4A00262E95 /* UpdateAvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAvatarCell.swift; sourceTree = "<group>"; };
+		6514CA4B210A6F4A00262E95 /* UpdateAvatarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateAvatarCell.xib; sourceTree = "<group>"; };
 		65240A5420F545C20045E0C6 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65240A5720F545C20045E0C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65240A5C20F545C20045E0C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -163,6 +171,8 @@
 				652B60C620FFDC56003CB87D /* ProfileVC.xib */,
 				65B8DE3421051A8200ED0B47 /* AddChannelVC.xib */,
 				65B8DE412107CEBF00ED0B47 /* UpdateUserNameVC.xib */,
+				6514CA47210A6A1000262E95 /* UpdateAvatarPickerVC.xib */,
+				6514CA4B210A6F4A00262E95 /* UpdateAvatarCell.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -187,6 +197,7 @@
 				652B60C320FFBFF3003CB87D /* CircleImage.swift */,
 				65B8DE31210516D300ED0B47 /* ChannelCell.swift */,
 				65B8DE3E21066E1900ED0B47 /* MessageCell.swift */,
+				6514CA4A210A6F4A00262E95 /* UpdateAvatarCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,6 +222,7 @@
 				6526FEA020F696AC00A685C1 /* CreateAccountVC.swift */,
 				652B60BF20FE967C003CB87D /* AvatarPickerVC.swift */,
 				65B8DE402107CEBF00ED0B47 /* UpdateUserNameVC.swift */,
+				6514CA46210A6A1000262E95 /* UpdateAvatarPickerVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -285,11 +297,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				65B8DE3621051A8200ED0B47 /* AddChannelVC.xib in Resources */,
+				6514CA49210A6A1000262E95 /* UpdateAvatarPickerVC.xib in Resources */,
 				652B60C820FFDC56003CB87D /* ProfileVC.xib in Resources */,
 				65B8DE432107CEBF00ED0B47 /* UpdateUserNameVC.xib in Resources */,
 				65240A6220F545C30045E0C6 /* LaunchScreen.storyboard in Resources */,
 				65240A5F20F545C30045E0C6 /* Assets.xcassets in Resources */,
 				65240A5D20F545C20045E0C6 /* Main.storyboard in Resources */,
+				6514CA4D210A6F4A00262E95 /* UpdateAvatarCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,10 +363,12 @@
 				65B8DE38210520C400ED0B47 /* SocketService.swift in Sources */,
 				652B60C720FFDC56003CB87D /* ProfileVC.swift in Sources */,
 				65B8DE32210516D300ED0B47 /* ChannelCell.swift in Sources */,
+				6514CA48210A6A1000262E95 /* UpdateAvatarPickerVC.swift in Sources */,
 				65C7BCC020F54E7400C8972D /* ChannelVC.swift in Sources */,
 				652B60C020FE967C003CB87D /* AvatarPickerVC.swift in Sources */,
 				65B8DE3F21066E1900ED0B47 /* MessageCell.swift in Sources */,
 				6526FEA820F7FEA200A685C1 /* RoundedButton.swift in Sources */,
+				6514CA4C210A6F4A00262E95 /* UpdateAvatarCell.swift in Sources */,
 				65B8DE3B21065B0400ED0B47 /* Message.swift in Sources */,
 				65B8DE302105120D00ED0B47 /* Channel.swift in Sources */,
 				652B60C420FFBFF3003CB87D /* CircleImage.swift in Sources */,

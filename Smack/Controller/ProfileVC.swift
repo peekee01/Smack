@@ -20,6 +20,8 @@ class ProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ProfileVC.newUserNameWasSet), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
     }
     
     
@@ -49,6 +51,9 @@ class ProfileVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @objc func newUserNameWasSet(_ notif: Notification) {
+        setupView()
+    }
     
     @IBAction func updateUserName(_ sender: Any) {
         if AuthService.instance.isLoggedIn {

@@ -51,7 +51,6 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if AuthService.instance.isLoggedIn {
             let profile = ProfileVC()
             profile.modalPresentationStyle = .custom
-            profile.preferredContentSize = CGSize(width: UIScreen.main.bounds.width     , height: UIScreen.main.bounds.height)
             present(profile, animated: true, completion: nil)
         } else {
             performSegue(withIdentifier: TO_LOGIN, sender: nil)
